@@ -7,7 +7,7 @@ import json
 ## Define azureAI search settings
 service_name = 'doc-search-preview'
 index_name = 'mydata-index'
-admin_key = 'lxoKWNwfDMIGeFyjTr9tVwKk7sz2IJMrlewyGYuhZSAzSeASaxjF'
+admin_key = '' #add your admin key
 endpoint = f"https://{service_name}.search.windows.net/"
 credentials = AzureKeyCredential(admin_key)
 
@@ -18,7 +18,7 @@ df = pd.read_excel(file_path)
 ## Initiliaze the client 
 search_client = SearchClient(endpoint = endpoint, index_name = index_name, credential = credentials)
 
-## Upload data to the AzureAIsearch
+## Upload data to the Azure - AIsearch
 
 data = []
 
